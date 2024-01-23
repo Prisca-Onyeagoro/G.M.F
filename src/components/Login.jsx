@@ -1,0 +1,78 @@
+import React from 'react';
+import Link from 'next/link';
+import { EnvelopeIcon } from '@heroicons/react/24/outline';
+
+const Login = () => {
+  return (
+    <>
+      <form class="max-w-sm mx-auto  ">
+        <div className="flex text-lg justify-center items-center">
+          <p className="font-extrabold to-blue-950 mb-10">Welcome</p>
+        </div>
+        <div class="relative mb-5   flex justify-center items-center">
+          <div class="   absolute inset-y-0 start-4 flex items-center ps-3.5 pointer-events-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg>
+          </div>
+          <input
+            type="email"
+            id="email-address-icon"
+            class="bg-gray-50 text-sm w-80 md:w-full ps-10 p-2.5  "
+            placeholder="Email"
+          />
+        </div>
+        {/* password */}
+        <div class="relative mb-5   flex justify-center items-center">
+          <div class="   absolute inset-y-0 start-4 flex items-center ps-3.5 pointer-events-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                fillRule="evenodd"
+                d="M15.75 1.5a6.75 6.75 0 0 0-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 0 0-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 0 0 .75-.75v-1.5h1.5A.75.75 0 0 0 9 19.5V18h1.5a.75.75 0 0 0 .53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1 0 15.75 1.5Zm0 3a.75.75 0 0 0 0 1.5A2.25 2.25 0 0 1 18 8.25a.75.75 0 0 0 1.5 0 3.75 3.75 0 0 0-3.75-3.75Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+          <input
+            type="password"
+            id="email-address-icon"
+            class="bg-gray-50 text-sm w-80 md:w-full ps-10 p-2.5  "
+            placeholder="Password"
+          />
+        </div>
+        <p className="text-blue-950 relative -right-56">Forgot Password?</p>
+        <div className="flex flex-col items-center justify-center">
+          <button className="bg-gray-800 text-gray-100 p-2 w-80   md:w-full rounded text-lg mt-28 mb-28">
+            Sign In
+          </button>
+          <div className="flex relative -right-22">
+            <p className="text-gray-800">Don't have an account?</p>
+            <Link href="/signup">
+              <p className="text-orange-600 font-extrabold">Sign Up</p>
+            </Link>
+          </div>
+        </div>
+
+        <div></div>
+      </form>
+    </>
+  );
+};
+
+export default Login;
