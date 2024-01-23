@@ -4,13 +4,16 @@ import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
 const Login = () => {
   return (
-    <>
-      <form class="max-w-sm mx-auto  ">
-        <div className="flex text-lg justify-center items-center">
-          <p className="font-extrabold to-blue-950 mb-10">Welcome</p>
+    <div className="mt-28">
+      <form class="max-w-sm mx-auto ">
+        <div className="flex text-2xl justify-center items-center">
+          <p className="font-extrabold text-gray-800 mb-10">Welcome</p>
         </div>
-        <div class="relative mb-5   flex justify-center items-center">
-          <div class="   absolute inset-y-0 start-4 flex items-center ps-3.5 pointer-events-none">
+        <div
+          id="space"
+          className=" relative mb-5 md:space-x-6  flex justify-center items-center"
+        >
+          <div className="      absolute inset-y-0 start-4 flex items-center ps-3.5 pointer-events-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -34,7 +37,10 @@ const Login = () => {
           />
         </div>
         {/* password */}
-        <div class="relative mb-5   flex justify-center items-center">
+        <div
+          id="space"
+          class="relative mb-5 md:space-x-6  flex justify-center items-center"
+        >
           <div class="   absolute inset-y-0 start-4 flex items-center ps-3.5 pointer-events-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +62,9 @@ const Login = () => {
             placeholder="Password"
           />
         </div>
-        <p className="text-blue-950 relative -right-56">Forgot Password?</p>
+        <p id="forgot" className="text-gray-800 relative -right-56">
+          Forgot Password?
+        </p>
         <div className="flex flex-col items-center justify-center">
           <button className="bg-gray-800 text-gray-100 p-2 w-80   md:w-full rounded text-lg mt-28 mb-28">
             Sign In
@@ -68,10 +76,8 @@ const Login = () => {
             </Link>
           </div>
         </div>
-
-        <div></div>
       </form>
-    </>
+    </div>
   );
 };
 
