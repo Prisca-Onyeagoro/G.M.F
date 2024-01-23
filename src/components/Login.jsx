@@ -1,11 +1,19 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
-import { EnvelopeIcon } from '@heroicons/react/24/outline';
+import { useForm } from 'react-hook-form';
 
 const Login = () => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
+
+  const SubmitHandler = () => {};
   return (
     <div className="mt-28">
-      <form class="max-w-sm mx-auto ">
+      <form class="max-w-sm mx-auto " onSubmit={handleSubmit(SubmitHandler)}>
         <div className="flex text-2xl justify-center items-center">
           <p className="font-extrabold text-gray-800 mb-10">Welcome</p>
         </div>
@@ -29,12 +37,25 @@ const Login = () => {
               />
             </svg>
           </div>
-          <input
-            type="email"
-            id="email-address-icon"
-            class="bg-gray-50 text-sm w-80 md:w-full ps-10 p-2.5  "
-            placeholder="Email"
-          />
+
+          <div className="flex flex-col md:w-80">
+            <input
+              type="email"
+              id="email-address-icon"
+              {...register('email', {
+                required: 'Please enter a valid email',
+                pattern: {
+                  value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
+                  message: 'Please enter valid email',
+                },
+              })}
+              class="bg-gray-50 text-sm w-80 md:w-full ps-10 p-2.5  "
+              placeholder="Email"
+            />
+            {errors.email && (
+              <div className="text-red-500">{errors.email.message}</div>
+            )}
+          </div>
         </div>
         {/* password */}
         <div
@@ -55,19 +76,31 @@ const Login = () => {
               />
             </svg>
           </div>
-          <input
-            type="password"
-            id="email-address-icon"
-            class="bg-gray-50 text-sm w-80 md:w-full ps-10 p-2.5  "
-            placeholder="Password"
-          />
+          <div className="flex flex-col md:w-80 ">
+            <input
+              type="password"
+              id="email-address-icon"
+              class="bg-gray-50 text-sm w-80 md:w-full ps-10 p-2.5  "
+              placeholder="Password"
+              {...register('password', {
+                required: 'Please enter password',
+                minLength: {
+                  value: 6,
+                  message: 'password is less than 5 chars',
+                },
+              })}
+            />
+            {errors.password && (
+              <div className="text-red-500 ">{errors.password.message}</div>
+            )}
+          </div>
         </div>
         <p id="forgot" className="text-gray-800 relative -right-56">
           Forgot Password?
         </p>
         <div className="flex flex-col items-center justify-center">
           <button className="bg-gray-800 text-gray-100 p-2 w-80   md:w-full rounded text-lg mt-28 mb-28">
-            Sign In
+            <Link href="/home">Sign In</Link>
           </button>
           <div className="flex relative -right-22">
             <p className="text-gray-800">Don't have an account?</p>
