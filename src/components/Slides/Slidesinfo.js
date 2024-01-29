@@ -35,9 +35,9 @@ const Slidesinfo = () => {
         <p className="font-bold tracking-tighter">
           115,341.23 <span className="font-light">NGN</span>
         </p>
-        <div className="flex gap-4 mt-6 ml-44 tracking-tight ">
+        <div className="flex gap-4 mt-6 ml-30 tracking-tight ">
           <button className="border border-orange-500 px-4 pt-1 rounded-full">
-            withdraw
+            Withdraw
           </button>
           <button className="bg-orange-500  px-4 pt-1 rounded-full">
             Transfer
