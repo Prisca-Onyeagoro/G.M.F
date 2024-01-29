@@ -4,9 +4,9 @@ import Vault from '../VaultIcon/Vault';
 const Slidesinfo2 = () => {
   return (
     <div className="flex flex-col px-5">
-      <div className="flex justify-center items-center font-medium tracking-tight">
+      {/* <div className="flex justify-center items-center font-medium tracking-tight">
         <Vault />
-      </div>
+      </div> */}
       <div className="font-bold flex justify-center mb-3">vault</div>
       <div className="flex justify-between">
         <p className="font-bold tracking-tighter">

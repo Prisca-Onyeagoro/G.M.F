@@ -2,9 +2,9 @@ import React from 'react';
 
 const Slidesinfo = () => {
   return (
-    <div className="flex flex-col px-5">
-      <div className="font-bold flex justify-center mb-3">Total balance</div>
-      <div className="flex justify-between">
+    <div className="flex flex-col px-3">
+      <div className="font-bold flex justify-center mt-3">Total balance</div>
+      <div className="flex justify-between relative top-12">
         <p className="font-bold tracking-tighter">
           115,341.23 <span className="font-light">NGN</span>
         </p>
@@ -30,7 +30,7 @@ const Slidesinfo = () => {
           </svg>
         </div>
       </div>
-      <div className="pt-4">
+      <div className="pt-4   relative -bottom-12">
         <p className="font-light tracking-tighter text-xs">Avail. Balance</p>
         <p className="font-bold tracking-tighter">
           115,341.23 <span className="font-light">NGN</span>
