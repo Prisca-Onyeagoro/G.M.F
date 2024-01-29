@@ -3,9 +3,9 @@ const Monthly = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={56}
-    height={64}
+    height={50}
     viewBox="0 0 448 512"
-    className="text-pink-600"
+    className="text-pink-500"
     {...props}
   >
     <path

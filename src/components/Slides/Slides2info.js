@@ -1,8 +1,12 @@
 import React from 'react';
+import Vault from '../VaultIcon/Vault';
 
 const Slidesinfo2 = () => {
   return (
     <div className="flex flex-col px-5">
+      <div className="flex justify-center items-center font-medium tracking-tight">
+        <Vault />
+      </div>
       <div className="font-bold flex justify-center mb-3">vault</div>
       <div className="flex justify-between">
         <p className="font-bold tracking-tighter">
@@ -36,9 +40,6 @@ const Slidesinfo2 = () => {
           115,341.23 <span className="font-light">NGN</span>
         </p>
         <div className="flex gap-4 mt-6 ml-24 tracking-tight ">
-          <button className="border border-orange-500 px-4 pt-1 rounded-full">
-            withdraw
-          </button>
           <button className="bg-orange-500  px-4 pt-1 rounded-full">
             Transfer
           </button>
