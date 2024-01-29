@@ -39,7 +39,7 @@ const Slidesinfo2 = () => {
         <p className="font-bold tracking-tighter">
           115,341.23 <span className="font-light">NGN</span>
         </p>
-        <div className="flex gap-4 mt-6 ml-24 tracking-tight ">
+        <div className="flex gap-4 mt-6 ml-48 tracking-tight ">
           <button className="bg-orange-500  px-4 pt-1 rounded-full">
             Transfer
           </button>
