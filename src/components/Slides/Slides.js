@@ -13,7 +13,7 @@ function Slides() {
 
   return (
     <div
-      className="embla card max-w-md rounded-3xl mt-5 bg-blue-950 p-4 text-white"
+      className="embla card max-w-md rounded-3xl mt-5 bg-blue-950 p-4 text-white md:-ml-56 lg:-ml-36"
       ref={emblaRef}
     >
       <div className="embla__container ">

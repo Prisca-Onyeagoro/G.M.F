@@ -1,5 +1,5 @@
 import React from 'react';
-import Vault from '../VaultIcon/Vault';
+import { CiVault } from 'react-icons/ci';
 
 const Slidesinfo2 = () => {
   return (
@@ -7,7 +7,10 @@ const Slidesinfo2 = () => {
       {/* <div className="flex justify-center items-center font-medium tracking-tight">
         <Vault />
       </div> */}
-      <div className="font-bold flex justify-center mb-3">vault</div>
+      <div className="font-bold flex justify-center items-center  gap-2 mb-3">
+        <CiVault className="w-6 h-6" />
+        vault
+      </div>
       <div className="flex justify-between">
         <p className="font-bold tracking-tighter">
           115,341.23 <span className="font-light">NGN</span>

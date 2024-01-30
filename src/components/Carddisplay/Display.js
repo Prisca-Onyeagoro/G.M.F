@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Svg from '../Pigsvg/pig';
 import Target from '../TargetIcon/Traget';
 import Vault from '../VaultIcon/Vault';
@@ -8,24 +9,27 @@ import Progress from '../ProgressIcon/Progress';
 const Display = () => {
   return (
     <div class="grid grid-cols-2 gap-4  mt-5">
-      <div className="max-w-md  p-5 border-4 bg-orange-300 border-orange-300 rounded-3xl">
-        <div className="flex flex-col justify-center items-center">
+      <Link href={'/savings'}>
+        <div className="max-w-md  p-5 border-4 bg-orange-300 border-orange-400 rounded-3xl">
           <div className="flex flex-col justify-center items-center">
-            <Svg />
-            <p className="font-bold">Savings</p>
-          </div>
-          <div className="">
-            <p className="font-light text-xs">
-              A flexible account designed for everyday savings, offering
-              competitive interest rates and easy access to your funds.
+            <div className="flex flex-col justify-center items-center">
+              <Svg />
+
+              <p className="font-bold">Savings</p>
+            </div>
+            <div className="">
+              <p className="font-light text-xs">
+                A flexible account designed for everyday savings, offering
+                competitive interest rates and easy access to your funds.
+              </p>
+            </div>
+
+            <p className="text-orange-500 font-bold">
+              50, 341.23 <span className="font-light">NGN</span>
             </p>
           </div>
-
-          <p className="text-orange-500 font-bold">
-            50, 341.23 <span className="font-light">NGN</span>
-          </p>
         </div>
-      </div>
+      </Link>
 
       <div className="max-w-md  p-5 border-4 bg-blue-200 border-blue-400 rounded-3xl">
         <div className="flex flex-col justify-center items-center">
@@ -83,7 +87,7 @@ const Display = () => {
           </p>
         </div>
       </div>
-      <div className="max-w-md  p-5 border-4 bg-blue-200 border-blue-400 rounded-3xl">
+      <div className="max-w-md  p-5  border-4 bg-blue-200 border-blue-400 rounded-3xl">
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <Progress />
@@ -91,7 +95,7 @@ const Display = () => {
           </div>
           <div className="">
             <p className="font-light text-xs">
-              Automate ypur regular savings with regular monthly contributions
+              Automate your regular savings with regular monthly contributions
               perfect for steady, consistent savings growth.
             </p>
           </div>
@@ -100,7 +104,7 @@ const Display = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-6 h-6 font-extrabold"
+            className="w-6 h-6 font-extrabold md:hidden"
           >
             <path
               fillRule="evenodd"
@@ -111,21 +115,25 @@ const Display = () => {
         </div>
       </div>
 
-      <div className="max-w-md flex justify-center  p-5 border-4 bg-blue-200 border-blue-400 rounded-3xl">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-50 h-50"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 4.5v15m7.5-7.5h-15"
-          />
-        </svg>
+      <div className="max-w-md  p-5 border-4 bg-green-300 border-green-400 rounded-3xl">
+        <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center relative font-extralight top-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-40 h-40  font-extralight"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
   );
