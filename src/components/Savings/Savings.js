@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/link';
 const Savings = () => {
   return (
     <div>
@@ -57,7 +57,7 @@ const Savings = () => {
               type="submit"
               class="text-white   bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-500 font-medium rounded-lg text-sm px-10 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-600 dark:focus:ring-orange-600"
             >
-              Create account
+              <Link href="/created">Create account</Link>
             </button>
           </div>
         </form>

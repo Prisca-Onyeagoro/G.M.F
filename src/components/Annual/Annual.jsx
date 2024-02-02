@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Vaults = () => {
+const Annual = () => {
   return (
     <>
       <div>
@@ -27,13 +27,13 @@ const Vaults = () => {
               for="email"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-blue-900"
             >
-              Time Frame
+              Founding date
             </label>
             <input
               type="text"
               id="text"
               className="shadow-sm bg-gray-600 border border-gray-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-              placeholder="2 months"
+              placeholder="12th of every september"
               required
             />
           </div>
@@ -52,6 +52,22 @@ const Vaults = () => {
               required
             />
           </div>
+
+          <div class="mb-5">
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-blue-900"
+            >
+              Funding type
+            </label>
+            <input
+              type="text"
+              id="text"
+              className="shadow-sm bg-gray-600 border border-gray-600 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+              placeholder="Automated"
+              required
+            />
+          </div>
           <div className="flex items-center justify-center mt-64">
             <button
               type="submit"
@@ -66,4 +82,4 @@ const Vaults = () => {
   );
 };
 
-export default Vaults;
+export default Annual;
