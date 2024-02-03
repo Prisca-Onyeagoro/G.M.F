@@ -1,7 +1,10 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import Loading from '@/components/Loadings/Loading';
 
 const Signup = () => {
   const {
@@ -10,12 +13,27 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
   const SubmitHandler = () => {};
+  const handleClick = () => {
+    try {
+      setIsLoading(true);
+      router.push('/home');
+    } catch (error) {
+      setIsLoading(false);
+    }
+  };
   return (
     <div className="mt-28">
       <form class="max-w-sm mx-auto " onSubmit={handleSubmit(SubmitHandler)}>
         <div className="flex text-2xl justify-center items-center">
-          <p className="font-extrabold text-gray-800 mb-10">G.M.F logo</p>
+          <Image
+            src="/gmflogo.png"
+            width={100}
+            height={100}
+            alt="Picture of the author"
+          />
         </div>
         <div
           id="space"
@@ -139,8 +157,11 @@ const Signup = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <button className="bg-gray-800 text-gray-100 p-2 w-80   md:w-full rounded text-lg mt-28 mb-28">
-            <Link href="/home">Sign Up</Link>
+          <button
+            onClick={handleClick}
+            className="bg-gray-800 text-gray-100 p-2 w-80   md:w-full rounded text-lg mt-28 mb-28"
+          >
+            Sign Up
           </button>
           <div className="flex relative -right-22">
             <p className="text-gray-800">Already have an account?</p>
@@ -149,6 +170,7 @@ const Signup = () => {
             </Link>
           </div>
         </div>
+        {isLoading && <Loading />}
       </form>
     </div>
   );
