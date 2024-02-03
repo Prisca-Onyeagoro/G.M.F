@@ -76,7 +76,7 @@ const page = () => {
           </div>
           {/* Account Statement */}
           <div className="mt-4 text-lg font-bold text-blue-900 ">
-            <Link href="/account-Statement">Account Statement</Link>
+            <Link href="/account-statement">Account Statement</Link>
           </div>{' '}
           {/* kyc level*/}
           <div className="flex gap-52 mt-4 ">
