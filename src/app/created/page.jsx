@@ -49,9 +49,12 @@ const page = () => {
           </div>
           <div className="flex gap-48 mt-4 ">
             <div>
-              <p className="text-lg tracking-tighter font-bold text-blue-900  ">
+              <Link
+                href={'/addbank'}
+                className="text-lg tracking-tighter font-bold text-blue-900  "
+              >
                 Add Bank/Card
-              </p>
+              </Link>
               <p className="tracking-tighter font-light text-xs text-blue-900 ">
                 link your bank or credit/debit card
               </p>
