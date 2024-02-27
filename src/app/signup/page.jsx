@@ -14,22 +14,17 @@ const Signup = () => {
   } = useForm();
 
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+
   const SubmitHandler = () => {};
   const handleClick = () => {
-    try {
-      setIsLoading(true);
-      router.push('/home');
-    } catch (error) {
-      setIsLoading(false);
-    }
+    router.push('/home');
   };
   return (
     <div className="mt-28">
       <form class="max-w-sm mx-auto " onSubmit={handleSubmit(SubmitHandler)}>
         <div className="flex text-2xl justify-center items-center">
           <Image
-            src="/gmflogo.png"
+            src="/steal.png"
             width={100}
             height={100}
             alt="Picture of the author"
@@ -141,7 +136,7 @@ const Signup = () => {
               type="password"
               id="email-address-icon"
               class="bg-gray-50 text-sm w-80 md:w-full ps-10 p-2.5  "
-              placeholder="Password"
+              placeholder="Confirm Password"
               {...register('password2', {
                 required: 'Please enter password',
                 minLength: {
@@ -170,7 +165,6 @@ const Signup = () => {
             </Link>
           </div>
         </div>
-        {isLoading && <Loading />}
       </form>
     </div>
   );

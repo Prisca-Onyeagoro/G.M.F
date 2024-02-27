@@ -1,13 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Loading = () => {
+const loading = () => {
   return (
-    <div>
-      {' '}
-      <Image src="/Gear.svg" width={100} height={100} alt="logo of gmf" />
+    <div className="flex justify-center items-center mt-48">
+      <Image src="/loader.svg" alt="loader" height={300} width={300} />
     </div>
   );
 };
 
-export default Loading;
+export default loading;
