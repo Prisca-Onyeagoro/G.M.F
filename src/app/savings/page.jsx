@@ -1,5 +1,5 @@
 'use client';
-
+import Link from 'next/link';
 import React from 'react';
 import { GoPlus } from 'react-icons/go';
 
@@ -17,7 +17,7 @@ const savings = () => {
             <div class="relative z-0 w-full mb-5 group">
               <div className="flex  items-center gap-1">
                 <input
-                  type="email"
+                  type="number"
                   name="floating_email"
                   id="floating_email"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-gray-800 focus:outline-none focus:ring-0 focus:border-gray-800 peer"
@@ -45,7 +45,7 @@ const savings = () => {
               <div class="relative z-0 w-full mb-5 group">
                 <div className="flex  items-center gap-1">
                   <input
-                    type="email"
+                    type="text"
                     name="floating_email"
                     id="floating_email"
                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-gray-800 focus:outline-none focus:ring-0 focus:border-gray-800 peer"
@@ -63,12 +63,16 @@ const savings = () => {
               </div>
             </div>
             <div className="flex justify-center items-center gap-4">
-              <button className="border border-orange-500 px-4 pt-1 rounded-full">
-                Transfer
-              </button>
-              <button className="bg-orange-500  px-4 pt-1 text-white rounded-full">
-                Withdraw
-              </button>
+              <Link href="/transfer">
+                <button className="border border-orange-500 px-4 pt-1 rounded-full">
+                  Transfer
+                </button>
+              </Link>
+              <Link href="/withdraw">
+                <button className="bg-orange-500  px-4 pt-1 text-white rounded-full">
+                  Withdraw
+                </button>
+              </Link>
             </div>
           </form>
         </div>

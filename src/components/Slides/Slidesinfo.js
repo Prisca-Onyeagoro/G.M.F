@@ -1,9 +1,18 @@
+'use client';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
 const Slidesinfo = () => {
+  const route = useRouter();
   const [isHidden, setisHidden] = useState(true);
   const Handle = () => {
     setisHidden((prevValue) => !prevValue);
+  };
+  const withdraw = () => {
+    route.push('/withdraw');
+  };
+  const transfer = () => {
+    route.push('/transfer');
   };
   return (
     <div className="flex flex-col px-3">
@@ -52,10 +61,16 @@ const Slidesinfo = () => {
           )}
         </p>
         <div className="flex gap-4 mt-6 ml-30 tracking-tight ">
-          <button className="border border-orange-500 px-4 pt-1 rounded-full">
+          <button
+            onClick={withdraw}
+            className="border border-orange-500 px-4 pt-1 rounded-full"
+          >
             Withdraw
           </button>
-          <button className="bg-orange-500  px-4 pt-1 rounded-full">
+          <button
+            onClick={transfer}
+            className="bg-orange-500  px-4 pt-1 rounded-full"
+          >
             Transfer
           </button>
         </div>

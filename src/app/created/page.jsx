@@ -97,7 +97,7 @@ const page = () => {
           </div>
           <div className="mt-4 text-lg flex items-center text-orange-500 font-bold  ">
             <BsBoxArrowInLeft />
-            <Link href="/home">Log out</Link>
+            <Link href="/">Log out</Link>
           </div>
         </div>
       </div>

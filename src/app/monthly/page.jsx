@@ -4,6 +4,7 @@ import Sidebar from '@/components/Transfer/Sidebar';
 import React, { useState } from 'react';
 import { GoPlus } from 'react-icons/go';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import Link from 'next/link';
 
 const monthly = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -29,7 +30,7 @@ const monthly = () => {
             <div class="relative z-0 w-full mb-5 group">
               <div className="flex  items-center gap-1">
                 <input
-                  type="email"
+                  type="number"
                   name="floating_email"
                   id="floating_email"
                   class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-gray-800 focus:outline-none focus:ring-0 focus:border-gray-800 peer"
@@ -57,7 +58,7 @@ const monthly = () => {
               <div class="relative z-0 w-full mb-5 group">
                 <div className="flex  items-center gap-1">
                   <input
-                    type="email"
+                    type="text"
                     name="floating_email"
                     id="floating_email"
                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-gray-800 focus:outline-none focus:ring-0 focus:border-gray-800 peer"
@@ -74,9 +75,11 @@ const monthly = () => {
               </div>
             </div>
             <div className="flex justify-center items-center gap-4">
-              <button className=" bg-orange-500 px-4 pt-1 rounded-full">
-                Transfer
-              </button>
+              <Link href="/transfer">
+                <button className=" bg-orange-500 px-4 pt-1 rounded-full">
+                  Transfer
+                </button>
+              </Link>
             </div>
           </form>
         </div>
