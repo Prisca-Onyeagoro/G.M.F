@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Slidesinfo = () => {
+  const [isHidden, setisHidden] = useState(true);
+  const Handle = () => {
+    setisHidden((prevValue) => !prevValue);
+  };
   return (
     <div className="flex flex-col px-3">
       <div className="font-bold flex justify-center mt-2">Total balance</div>
       <div className="flex justify-between relative top-2">
         <p className="font-bold tracking-tighter">
-          115,341.23 <span className="font-light">NGN</span>
+          {isHidden ? (
+            <p>*********</p>
+          ) : (
+            <p>
+              115,341.23 <span className="font-light">NGN</span>
+            </p>
+          )}
         </p>
-        <div>
+        <div onClick={Handle}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -33,7 +43,13 @@ const Slidesinfo = () => {
       <div className="pt-4   relative -bottom-2">
         <p className="font-thin tracking-tighter text-xs">Avail. Balance</p>
         <p className="font-bold tracking-tighter">
-          115,341.23 <span className="font-light">NGN</span>
+          {isHidden ? (
+            <p>*********</p>
+          ) : (
+            <p>
+              115,341.23 <span className="font-light">NGN</span>
+            </p>
+          )}
         </p>
         <div className="flex gap-4 mt-6 ml-30 tracking-tight ">
           <button className="border border-orange-500 px-4 pt-1 rounded-full">

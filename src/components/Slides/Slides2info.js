@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { CiVault } from 'react-icons/ci';
 
 const Slidesinfo2 = () => {
+  const [isHidden, setisHidden] = useState(true);
+  const Handle = () => {
+    setisHidden((prevValue) => !prevValue);
+  };
   return (
     <div className="flex flex-col px-5">
       {/* <div className="flex justify-center items-center font-medium tracking-tight">
@@ -12,10 +17,14 @@ const Slidesinfo2 = () => {
         vault
       </div>
       <div className="flex justify-between">
-        <p className="font-bold tracking-tighter">
-          115,341.23 <span className="font-light">NGN</span>
-        </p>
-        <div>
+        {isHidden ? (
+          <p>*********</p>
+        ) : (
+          <p>
+            115,341.23 <span className="font-light">NGN</span>
+          </p>
+        )}
+        <div onClick={Handle}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -40,7 +49,13 @@ const Slidesinfo2 = () => {
       <div className="pt-4">
         <p className="font-light tracking-tighter text-xs">Avail. Balance</p>
         <p className="font-bold tracking-tighter">
-          115,341.23 <span className="font-light">NGN</span>
+          {isHidden ? (
+            <p>*********</p>
+          ) : (
+            <p>
+              115,341.23 <span className="font-light">NGN</span>
+            </p>
+          )}
         </p>
         <div className="flex gap-4 mt-6 ml-48 tracking-tight ">
           <button className="bg-orange-500  px-4 pt-1 rounded-full">
