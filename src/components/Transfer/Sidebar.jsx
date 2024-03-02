@@ -50,10 +50,12 @@ const Sidebar = ({ setSidebar }) => {
 
           <div className="mt-20">
             <ul className="mx-4 flex flex-col gap-8">
-              <li className="flex cursor-pointer  items-center gap-3 text-lg text-orange-500">
-                <MdOutlineSpaceDashboard className="inline text-3xl" />{' '}
-                Dashboard
-              </li>
+              <Link href="/home">
+                <li className="flex cursor-pointer  items-center gap-3 text-lg text-orange-500">
+                  <MdOutlineSpaceDashboard className="inline text-3xl" />{' '}
+                  Dashboard
+                </li>
+              </Link>
 
               <div className=" flex flex-col">
                 <li className="flex items-center gap-3 text-lg hover:text-orange-500">
@@ -73,34 +75,47 @@ const Sidebar = ({ setSidebar }) => {
                 </li>
                 {show ? (
                   <div className="relative left-16 flex flex-col gap-0">
-                    <li className="flex gap-2  font-thin text-sm cursor-pointer items-center">
-                      <Svg className="w-6 " /> Savings
-                    </li>
-                    <li className="flex gap-2 font-thin text-sm cursor-pointer items-center">
-                      <Vault className="w-6 " /> Vault
-                    </li>
-                    <li className="flex gap-2 font-thin text-sm cursor-pointer items-center">
-                      <Target className="w-6 " /> Target
-                    </li>
-                    <li className="flex font-thin gap-2 text-sm cursor-pointer items-center">
-                      <Progress className="w-6 " /> Progress
-                    </li>
-                    <li className="flex font-thin gap-2  text-sm cursor-pointer items-center">
-                      <Monthly className="w-6 " /> Monthly
-                    </li>
+                    <Link href="/savings">
+                      <li className="flex gap-2  font-thin text-sm cursor-pointer items-center">
+                        <Svg className="w-6 " /> Savings
+                      </li>
+                    </Link>
+                    <Link href="/vault">
+                      <li className="flex gap-2 font-thin text-sm cursor-pointer items-center">
+                        <Vault className="w-6 " /> Vault
+                      </li>
+                    </Link>
+                    <Link href="/target">
+                      <li className="flex gap-2 font-thin text-sm cursor-pointer items-center">
+                        <Target className="w-6 " /> Target
+                      </li>
+                    </Link>
+                    <Link href="/progress">
+                      <li className="flex font-thin gap-2 text-sm cursor-pointer items-center">
+                        <Progress className="w-6 " /> Progress
+                      </li>
+                    </Link>
+                    <Link href="/monthly">
+                      <li className="flex font-thin gap-2  text-sm cursor-pointer items-center">
+                        <Monthly className="w-6 " /> Monthly
+                      </li>
+                    </Link>
                   </div>
                 ) : (
                   <p></p>
                 )}
               </div>
+              <Link href="/invest">
+                <li className="flex items-center gap-3 cursor-pointer  text-lg hover:text-orange-500">
+                  <IoWater className="inline text-3xl" /> Invest
+                </li>
+              </Link>
 
-              <li className="flex items-center gap-3 cursor-pointer  text-lg hover:text-orange-500">
-                <IoWater className="inline text-3xl" /> Invest
-              </li>
-
-              <li className="flex items-center cursor-pointer  gap-3 text-lg hover:text-orange-500">
-                <FaRegUser className="inline text-3xl" /> Account
-              </li>
+              <Link href="/account-statement">
+                <li className="flex items-center cursor-pointer  gap-3 text-lg hover:text-orange-500">
+                  <FaRegUser className="inline text-3xl" /> Account
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
