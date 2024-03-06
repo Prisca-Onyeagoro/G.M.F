@@ -40,7 +40,7 @@ const page = () => {
         >
           <div className="flex flex-col md:w-80">
             <input
-              type="password"
+              type="text"
               id=""
               class="bg-slate-400 placeholder-black text-sm w-80 md:w-full ps-10 p-3 rounded-lg  border-none "
               placeholder="Access Bank"
