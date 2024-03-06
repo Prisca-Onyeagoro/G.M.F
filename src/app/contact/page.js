@@ -26,8 +26,9 @@ const page = () => {
             <input
               type="text"
               id=""
-              class="bg-slate-400 placeholder-black text-sm w-80 md:w-full ps-10 p-3 rounded-lg  border-none "
+              class="bg-slate-400  placeholder-black text-sm w-80 md:w-full ps-10 p-3 rounded-lg  border-none "
               placeholder="2987324207"
+              disabled
             />
           </div>
         </div>
@@ -42,6 +43,7 @@ const page = () => {
               id=""
               class="bg-slate-400 placeholder-black text-sm w-80 md:w-full ps-10 p-3 rounded-lg  border-none "
               placeholder="Gmf@gmail.com"
+              disabled
             />
           </div>
           <div className="absolute   inset-y-0 end-10 flex items-center ps-3.5 pointer-events-none">
@@ -77,7 +79,7 @@ const page = () => {
         <div className="justify-center flex">
           <Link href="/created">
             <button className="bg-orange-600 rounded-lg text-gray-100 p-2 w-80 md:w-full text-lg mt-28 mb-28">
-              Add
+              Back
             </button>
           </Link>
         </div>
