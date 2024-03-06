@@ -1,82 +1,92 @@
 import React from 'react';
 import Link from 'next/link';
+import { MdExpandMore } from 'react-icons/md';
 
 const page = () => {
   return (
     <>
-      <form class="max-w-sm mx-auto">
-        <div class="mb-5">
+      <div className="flex justify-center mt-10 font-bold text-blue-950 text-2xl">
+        <p>Transfer</p>
+      </div>
+      <form class="max-w-sm mx-auto flex flex-col mt-20">
+        <div class="mb-5 flex flex-col justify-center">
           <label
-            for="email"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            for="text"
+            class="relative left-14 block mb-2 text-sm font-medium text-black"
           >
-            Your email
+            Amount
           </label>
-          <input
-            type="email"
-            id="email"
-            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-            placeholder="name@flowbite.com"
-            required
-          />
-        </div>
-        <div class="mb-5">
-          <label
-            for="password"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          <div
+            id="space"
+            className=" relative mb-5 md:space-x-6  flex justify-center items-center"
           >
-            Your password
-          </label>
-          <input
-            type="password"
-            id="password"
-            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-            required
-          />
-        </div>
-        <div class="mb-5">
-          <label
-            for="repeat-password"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
-            Repeat password
-          </label>
-          <input
-            type="password"
-            id="repeat-password"
-            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-            required
-          />
-        </div>
-        <div class="flex items-start mb-5">
-          <div class="flex items-center h-5">
-            <input
-              id="terms"
-              type="checkbox"
-              value=""
-              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
-              required
-            />
+            <div className="flex flex-col md:w-80">
+              <input
+                type="text"
+                id=""
+                class="bg-slate-400 placeholder-black text-sm w-80 md:w-full ps-10 p-3 rounded-lg  border-none "
+                placeholder="5, 000.00"
+              />
+            </div>
+            <div className="absolute   inset-y-0 end-10 flex items-center ps-3.5 pointer-events-none">
+              <div className="h-6 border-r w-1 border-gray-600 mr-6"></div>
+              <p className="font-bold text-orange-500 ">MAX</p>
+            </div>
           </div>
           <label
-            for="terms"
-            class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            for="text"
+            class="relative left-14 block mb-2 text-sm font-medium text-black"
           >
-            I agree with the{' '}
-            <a
-              href="#"
-              class="text-blue-600 hover:underline dark:text-blue-500"
-            >
-              terms and conditions
-            </a>
+            From
           </label>
+          <div
+            id="space"
+            className=" relative mb-5 md:space-x-6  flex justify-center items-center"
+          >
+            <div className="flex flex-col md:w-80">
+              <input
+                type="text"
+                id=""
+                class="bg-slate-400 placeholder-black text-sm w-80 md:w-full ps-10 p-3 rounded-lg  border-none "
+                placeholder="Savings"
+              />
+            </div>
+            <div className="absolute   inset-y-0 end-10 flex items-center ps-3.5 pointer-events-none">
+              <div className="h-6 border-r w-1 border-gray-600 mr-6"></div>
+              <MdExpandMore />
+            </div>
+          </div>
+          <label
+            for="text"
+            class="relative left-14 block mb-2 text-sm font-medium text-black"
+          >
+            To
+          </label>
+          <div
+            id="space"
+            className=" relative mb-5 md:space-x-6  flex justify-center items-center"
+          >
+            <div className="flex flex-col md:w-80">
+              <input
+                type="text"
+                id=""
+                class="bg-slate-400 placeholder-black text-sm w-80 md:w-full ps-10 p-3 rounded-lg  border-none "
+                placeholder="Main balance"
+              />
+            </div>
+            <div className="absolute   inset-y-0 end-10 flex items-center ps-3.5 pointer-events-none">
+              <div className="h-6 border-r w-1 border-gray-600 mr-6"></div>
+              <MdExpandMore />
+            </div>
+          </div>
         </div>
-        <button
-          type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Register new account
-        </button>
+        <div className="justify-center flex">
+          <Link href="/home">
+            <button className="bg-orange-600 rounded-lg text-gray-100 p-2 w-80 md:w-full text-lg mt-28 mb-28">
+              Transfer
+            </button>
+          </Link>
+        </div>
       </form>
     </>
   );

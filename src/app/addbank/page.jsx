@@ -46,9 +46,11 @@ const page = () => {
             <span class="inline-flex items-center px-3 text-sm text-black bg-gray-200   dark:bg-gray-300 dark:text-black ">
               <BsBank2 className="w-7 h-7" />
             </span>{' '}
-            <p className="flex flex-start text-lg font-bold ">
-              Withdrawal bank
-            </p>
+            <Link href="/withdrawal">
+              <p className="flex flex-start text-lg font-bold ">
+                Withdrawal bank
+              </p>
+            </Link>
           </Menu.Button>
           <Menu.Items className="flex flex-col gap-5 w-80 border border-r-0 border-b-0 border-l-0 border-t-4 border-blue-900 justify-center items-center bg-gray-300">
             {/* <Menu.Item className="mt-4">
